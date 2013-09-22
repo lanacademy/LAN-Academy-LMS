@@ -1,0 +1,12 @@
+foreach $video do
+  <div>
+	<video id="@url" class="video-js vjs-default-skin"
+	  controls preload="auto" width="560" height="315"
+	  data-setup='{"example_option":true}'>
+	 <source src="@url" type='video/mp4' />
+	</video>
+	<!--This is super crappy, but we can fix all this once we decide on the video player to use-->
+  	<link href="http://vjs.zencdn.net/4.1/video-js.css" rel="stylesheet">
+  	<script src="http://vjs.zencdn.net/4.1/video.js"></script>
+  </div>
+endforeach

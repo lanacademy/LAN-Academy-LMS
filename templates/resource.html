@@ -1,0 +1,23 @@
+:head
+      <div id="content" class="col eight">
+        <p class="date col one">@date</p>
+        <div class="description col six">
+          <h2 class="col six"><a href="@root_path">@title</a></h2>
+          @content
+  		<p> <em>&larr;</em><a href="@parent">Back to Syllabus</a> <!--This variable needs to be defined--></p>
+        </div>
+        <hr>
+        :media
+     <div id="paging-nav"></div>
+      <hr>
+	  <!--Scripts-->
+      <script src="@root_path/public/docs/js/jquery-1.9.0.min.js"></script>
+      <script src="@root_path/public/docs/js/jquery.pagination-with-hash-change.js"></script>
+      <script>
+        $(document).ready(function() {
+          $('#media').paginationwithhashchange({
+          });
+        });
+      </script>
+	  <!--/Scripts-->
+:foot

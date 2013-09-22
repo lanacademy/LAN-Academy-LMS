@@ -1,0 +1,31 @@
+<?php
+session_start();
+?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title>@title, @name's Portfolio </title>
+    <link rel="alternate" type="application/atom+xml" href="@root_path/?/feed/">
+    <link rel="stylesheet" href="@root_path/public/docs/css/screen.css" type="text/css" media="screen"> 
+  </head>
+  <body>
+    <div id="container">
+      <h1 class="col three">
+	 <a href="@root_path">@name</a><br/>
+<?php
+	if(file_exists(dirname($_SERVER['SCRIPT_NAME']) . '/user/users/' . $_SESSION['username'] . '.xml')){
+		  		echo "Welcome <a href=" . dirname($_SERVER['SCRIPT_NAME']) . "/user/admin.php>" . $_SESSION['username'] . "</a><br/>";
+		  		echo "<a href=" . dirname($_SERVER['SCRIPT_NAME']) . "/user/logout.php>Logout</a><br/>";
+	}
+	else{
+		  		echo "<a href=" . dirname($_SERVER['SCRIPT_NAME']) . "/user/login.php>Login</a><br/>";
+		  		echo "<a href=" . dirname($_SERVER['SCRIPT_NAME']) . "/user/register.php>Register</a><br/>";
+	}
+?>
+        <strong>@profession</strong>
+      </h1>
+      <em class="col three">@email</em>
+      <hr>
+      :navigation

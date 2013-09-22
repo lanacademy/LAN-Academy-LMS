@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="GWrite (WYSIWYG editor)" name="generator">
+
+    <title>Creating Pages</title>
+    <style>
+img{
+    border: 2px;
+    border-style: solid;
+    border-color: #c3d9ff;
+    padding: 5px;
+    }
+    h1, h2, h3, h4, h5, h6 {
+    color: #7DA721;
+    font-weight: bold;
+    }
+    p{
+    text-indent: 2em;
+    text-align: justify;
+    }
+    blockquote{
+    background-color:#EEFFFF;
+    border-left: 5px solid green;
+    padding-left: 5px;
+    margin: 0px;
+    padding: 5px;
+    }
+    pre{
+    background-color:#EEEEFF;
+    display: block;
+    border-left: 1px solid green;
+    margin: 0px;
+    padding: 5px;
+    }
+    code{
+    background-color:#EEEEFF;
+    margin: 15px;
+    padding: 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <p></p>
+
+    <h1 id="intro" style=
+    "margin: 0px 0px 6px 20px; text-decoration: underline; padding: 0px 0px 2px; color: rgb(0, 0, 0); font-family: 'Times New Roman', Times, times, sans-serif; text-align: left; text-indent: 0px;">
+    Creating Pages</h1>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    Each folder within&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/content</em>&nbsp;which
+    contains a .txt file will become a page. So to create a new page, you just
+    have to make a new folder then create a .txt file within it. The name of
+    the .txt file will tell stacey which&nbsp;<a href=
+    "http://staceyapp.com/documentation/editing-templates/#template-assignment"
+    style=
+    "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">template</a>&nbsp;it
+    should use for that page.</p>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    Pages are listed in reverse-numeric order using a numbered prefix on the
+    folder name (<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">10.</em>&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">9.</em>&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">8.</em>,
+    etc.). The url used to access each page will be the folder name minus the
+    number and dot.</p>
+
+    <p style=
+    "color: rgb(136, 136, 136); display: block; font-family: 'Times New Roman', Times, times, sans-serif; font-style: normal; line-height: 20px; margin: 0px 0px 8px 20px; padding: 0px 0px 2px; text-align: left; text-indent: 0px">
+    ie. a folder named:&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">1.project-name-10</em>&nbsp;will
+    be accessed via http://yourdomain.com/projects/<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">project-name-10</em>.</p>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    If you have&nbsp;<a href=
+    "http://staceyapp.com/tutorials/enable-clean-urls/" style=
+    "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">clean
+    urls</a>&nbsp;disabled (which they are by default) then the url will be
+    prepended with a&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">?/</em>.</p>
+
+    <p style=
+    "color: rgb(136, 136, 136); display: block; font-family: 'Times New Roman', Times, times, sans-serif; font-style: normal; line-height: 20px; margin: 0px 0px 8px 20px; padding: 0px 0px 2px; text-align: left; text-indent: 0px">
+    ie. a folder named:&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">1.project-name-10</em>&nbsp;will
+    be accessed via http://yourdomain.com/<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">?/</em>projects/project-name-10.</p>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    If you leave the numbered prefix off a folder, then the page will not show
+    up in any collections ($siblings, $children, etc.), but will still be
+    accessible by its url. This is useful for creating ‘floating’ pages.</p>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    When naming your folders, rather than using underscores (_), you should use
+    hyphens (-) to separate words.</p>
+
+    <p style=
+    "color: rgb(136, 136, 136); display: block; font-family: 'Times New Roman', Times, times, sans-serif; font-style: normal; line-height: 20px; margin: 0px 0px 8px 20px; padding: 0px 0px 2px; text-align: left; text-indent: 0px">
+    ie.&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">1.project-name</em>&nbsp;rather
+    than&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">1.project_name</em>&nbsp;or&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">1.project
+    name</em>.</p>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    Stacey supports unlimited depths of sub-pages, so you can split your
+    categories into sub-categories &amp; sub-sub-categories. Whatever works for
+    you.</p>
+
+    <h3 id="images" style=
+    "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0); font-family: 'Times New Roman', Times, times, sans-serif; text-align: left; text-indent: 0px;">
+    Images</h3>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    Stacey picks up any images within the page’s folder and automatically
+    inserts them into the page. Like pages themselves, the images are displayed
+    in reverse-numeric order. <img alt="Screenshot of project images" src=""
+    style=
+    "border-width: 1px; border-color: rgb(204, 204, 204); padding: 2px; margin: 6px 0px 10px; display: block;">
+    </p>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    Images are inserted as is, so they will need to be cropped to the correct
+    size before being added to the folder. The default template relies on
+    images with a maximum width of&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">560px</em>.
+    Images get collated into a partial named&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">:images</em>,
+    which can be inserted anywhere within a template file.</p>
+
+    <h3 id="other-assets" style=
+    "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0); font-family: 'Times New Roman', Times, times, sans-serif; text-align: left; text-indent: 0px;">
+    Other assets</h3>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    Video &amp; .swf files are embedded &amp; included in the same way as
+    images (collated into&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">:swf</em>&nbsp;&amp;&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">:video</em>&nbsp;partials),
+    whereas the content within any&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.html</em>&nbsp;files
+    will be inserted in place of the&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">:html</em>&nbsp;partial.
+    This is useful for embedding Youtube or Vimeo videos in the page.</p>
+
+    <p style=
+    "color: rgb(136, 136, 136); display: block; font-family: 'Times New Roman', Times, times, sans-serif; font-style: normal; line-height: 20px; margin: 0px 0px 8px 20px; padding: 0px 0px 2px; text-align: left; text-indent: 0px">
+    .swf or video files will need to be named after the file’s dimensions. ie.
+    1.<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">800x600</em>.mp4
+    — where&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">800</em>&nbsp;is
+    the movie’s width &amp;&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">600</em>&nbsp;is
+    its height.</p>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    In addition, stacey will recognise any other assets placed within a page’s
+    folder. Read more about&nbsp;<a href=
+    "http://staceyapp.com/documentation/editing-templates/assets/" style=
+    "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">handling
+    other asset types</a>.</p>
+
+    <h3 id="thumbnails" style=
+    "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0); font-family: 'Times New Roman', Times, times, sans-serif; text-align: left; text-indent: 0px;">
+    Thumbnails</h3>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    Each page can also have its own thumbnail. They can be added by placing a
+    image file named&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">thumb</em>&nbsp;(.gif,
+    .jpg or .png) within the page’s folder.</p>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    In the default templates, thumbnails are hidden using css. To turn their
+    display back on you need to edit the main css file (in&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/public/docs/css/screen.css</em>).
+    <img alt="Screenshot of CSS file location" src="" style=
+    "border-width: 1px; border-color: rgb(204, 204, 204); padding: 2px; margin: 6px 0px 10px; display: block;">
+    </p>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    towards the bottom of the file, find the line that reads:</p>
+    <pre style=
+    "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25; text-align: left; text-indent: 0px;">
+
+img.project-thumb { ... <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">display: none;</em> }
+</pre>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    and change it to read:</p>
+    <pre style=
+    "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25; text-align: left; text-indent: 0px;">
+
+img.project-thumb { ... <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">display: inline;</em> }
+</pre>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    Your thumbnails can be any size you like, but on the default template are
+    designed to be relatively small.</p>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    <br></p>
+
+    <p style=
+    "margin: 0px 0px 8px 20px; font-family: 'Times New Roman', Times, times, sans-serif; line-height: 20px; text-align: left; text-indent: 0px;">
+    </p>
+
+    <h1 id="content-editing" style=
+    "margin: 0px 0px 6px 20px; text-decoration: underline; padding: 0px 0px 2px; color: rgb(0, 0, 0);">
+    Content Editing</h1>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    Within the&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/content</em>&nbsp;directory,
+    there is a file named&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">_shared.txt</em>.</p>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">If
+    you open it up with a text editor, you should see:</p>
+    <pre style=
+    "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+name: <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">Name</em>
+-
+profession: <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">Graphic Designer</em>
+-
+email: <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">hi@yourdomain.com</em>
+</pre>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    Replace the highlighted data with your own details.</p>
+
+    <h3 id="text-file-encoding" style=
+    "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">Text file encoding</h3>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    All of your .txt files should be encoded using UTF-8. In addition to
+    ensuring no strange characters are inserted which could break stacey’s
+    rendering engine, this will also allow you to use special characters such
+    as&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">ö</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">—</em>&nbsp;or
+    double-byte characters such as&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">照</em>&nbsp;or&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">ラ</em>.</p>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    Any decent text editor will give you the option to edit and save your text
+    files as UTF-8, so google should be able to provide answers on how to do
+    this with your editor of choice.</p>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    You can read more about&nbsp;<a href=
+    "http://en.wikipedia.org/wiki/Text_file" style=
+    "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">text
+    files</a>&nbsp;&amp;&nbsp;<a href="http://en.wikipedia.org/wiki/UTF-8"
+    style=
+    "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">UTF-8
+    encoding</a>&nbsp;on Wikipedia.</p>
+
+    <h3 id="editing-content" style=
+    "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">Editing content</h3>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    Each folder which is to be displayed as a page should have
+    a&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.txt</em>&nbsp;file
+    inside it (even if this text file is empty). The name of the .txt file
+    should match up with a file in the&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/templates</em>&nbsp;folder,
+    as this is how stacey knows which template to use for each page. <img alt=
+    "Screenshot of /content folder with 'project.txt' selected" src="" style=
+    "border-width: 1px; border-color: rgb(204, 204, 204); padding: 2px; margin: 6px 0px 10px; display: block;">
+     <img alt="Screenshot of /templates folder with 'project.html' selected"
+    src="" style=
+    "border-width: 1px; border-color: rgb(204, 204, 204); padding: 2px; margin: 6px 0px 10px; display: block;">
+    </p>
+
+    <h3 id="how-variables-are-created" style=
+    "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">How variables are
+    created:</h3>
+
+    <ol style="padding: 0px 0px 6px 20px; margin: 0px;">
+        <li style="margin: 1px 0px 0px;">Browser hits&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">http://yourdomain.com/?/about/</em>.</li>
+
+        <li style="margin: 1px 0px 0px;">
+            <p style="margin: 0px 0px 8px;">Stacey reads the appropriate
+            content file&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/content/3.about/content.txt</em>.</p>
+            <pre style=
+            "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: -11px; font-size: 0.95em; line-height: 1.25;">
+
+title: About Title
+-
+content: 
+Lorem ipsum.
+</pre>
+        </li>
+
+        <li style="margin: 1px 0px 0px;">Two variables are extracted from the
+        keys &amp; values from within the .txt file:<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">@title</em>&nbsp;&amp;&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">@content</em>.
+        These will be available for use within the templates.</li>
+
+        <li style="margin: 1px 0px 0px;">Stacey finds the matching template
+        file, in this case,&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/templates/content.html</em></li>
+
+        <li style="margin: 1px 0px 0px;">
+            <p style="margin: 0px 0px 8px;">Stacey replaces the variables in
+            the template and outputs the final html.</p>
+
+            <p style="margin: 0px 0px 8px;">So this template code:</p>
+            <pre style=
+            "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: -11px; font-size: 0.95em; line-height: 1.25;">
+
+&lt;div id="main"&gt;
+  &lt;h1&gt;<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@title</em>&lt;/h1&gt;
+  <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@content</em>
+&lt;/div&gt;
+</pre>
+
+            <p style="margin: 0px 0px 8px;">becomes this html:</p>
+            <pre style=
+            "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: -11px; font-size: 0.95em; line-height: 1.25;">
+
+&lt;div id="main"&gt;
+  &lt;h1&gt;<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">About Title</em>&lt;/h1&gt;
+  <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">&lt;p&gt;Lorem ipsum.&lt;/p&gt;</em>
+&lt;/div&gt;
+</pre>
+        </li>
+    </ol>
+
+    <h3 id="content-file-format" style=
+    "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">Content file format</h3>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    The content files all follow a standard format; each&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">key</em>&nbsp;is
+    followed by a&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">:</em>,
+    a<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">value</em>&nbsp;and
+    a hyphen (-) to close the value.</p>
+    <pre style=
+    "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">key</em>: <em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">value 
+-</em>
+</pre>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    The keys match up with variable markers in the template files which get
+    replaced with the contents of the&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">value</em>.
+    You can create as many of your own keys as you need.</p>
+
+    <h4 id="keys" style="margin: 10px 0px 4px 20px; color: rgb(0, 0, 0);">
+    Keys</h4>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">A
+    key may only contain the following characters:<code style=
+    "color: rgb(102, 102, 102);">abcdefghijklmnopqrstuvwxyz0123456789_</code></p>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    Essentially, lowercase latin alphanumeric characters and underscores.<br>
+    Or, for the more technically inclined, anything which can be matched by the
+    following regular expression:&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;"><code style="color: rgb(102, 102, 102);">/[a-z0-9_]+?:/</code></em></p>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">A
+    standard content file looks something like this:</p>
+    <pre style=
+    "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+title: The Test Project 1
+-
+date: 2009, Jun—
+-
+content: 
+Lorem ipsum dolor...
+
+</pre>
+
+    <h4 id="separating-keys-values" style=
+    "margin: 10px 0px 4px 20px; color: rgb(0, 0, 0);">Separating Keys &amp;
+    Values</h4>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    Each value should be followed by a line containing only a hyphen character
+    (although the parser is forgiving of any accidental tabs or spaces).</p>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    The hyphen is optional on the last key/value pair.</p>
+    <pre style=
+    "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+title:  The Test Project 1
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">-</em>
+date: ...
+</pre>
+
+    <h4 id="values" style="margin: 10px 0px 4px 20px; color: rgb(0, 0, 0);">
+    Empty Values</h4>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">If
+    you want one of the values to be empty, leave a space after the colon.</p>
+    <pre style=
+    "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+title:<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;"> </em>
+-
+date: ...
+</pre>
+
+    <h3 style="margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">@path</h3>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    Additionally, the&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">@path</em>&nbsp;variable
+    is exposed to your content files, which is useful for linking to assets
+    within the current folder.<br>
+    It will output the relative path to the containing folder of the current
+    page.</p>
+
+    <p style=
+    "color: rgb(136, 136, 136); display: block; font-style: normal; margin: 0px 0px 8px 20px; padding: 0px 0px 2px; text-align: left; text-indent: 0px">
+    ie.&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">../content/4.projects/10.project-1/</em></p>
+
+    <h3 style="margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">
+    @bypass_cache</h3>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">To
+    bypass the cache for a specific page, you can add&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">bypass_cache:
+    true</em>&nbsp;to its text file. Any requests to this page will no longer
+    be cached. This is useful for pages which use randomised variables or php
+    code.</p>
+
+    <h3 id="markdown" style="margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">
+    Markdown</h3>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    Any values which contain one or more newline characters (line-breaks) will
+    be parsed as&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;"><a href="http://daringfireball.net/projects/markdown/"
+    style=
+    "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">Markdown</a></em>.</p>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    Within the following example, @title will come through as plain text, while
+    @content will be parsed as Markdown.</p>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    This:</p>
+    <pre style=
+    "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+date: 2009, Jun—
+-
+content:
+# Title
+Lorem ipsum.
+</pre>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    will become:</p>
+    <pre style=
+    "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+@date =&gt; 2009, Jun—
+
+@content =&gt; <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">&lt;h1&gt;</em>Title<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">&lt;/h1&gt;</em> <em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">&lt;p&gt;</em>Lorem ipsum.<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">&lt;/p&gt;</em>
+</pre>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    Because Markdown ignores html, if you prefer, you can use standard markup
+    in place of Markdown. The keys &amp; values mentioned above could just as
+    easily be written out as:</p>
+    <pre style=
+    "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+date: 2009, Jun—
+-
+content:
+&lt;h1&gt;Title&lt;/h1&gt;
+&lt;p&gt;Lorem ipsum.&lt;/p&gt;
+</pre>
+
+    <h4 id="markdown-references" style=
+    "margin: 10px 0px 4px 20px; color: rgb(0, 0, 0);">Markdown References</h4>
+
+    <p style="margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+    Stacey uses&nbsp;<em style=
+    "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;"><a href="http://michelf.com/projects/php-markdown/extra/"
+    style=
+    "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">PHP
+    Markdown Extra</a></em>&nbsp;which is a php-specific version of Markdown.
+    It also adds some of its own functionality, such as fenced code blocks and
+    header ids, so you should refer to its documentation as well as that of the
+    original Markdown.</p>
+
+    <ul style="padding: 0px 0px 6px 20px; margin: 0px;">
+        <li style="margin: 1px 0px 0px; list-style: none;">
+            <a href="http://daringfireball.net/projects/markdown/syntax/"
+            style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">
+            Markdown Documentation</a>
+        </li>
+
+        <li style="margin: 1px 0px 0px; list-style: none;">
+            <a href="http://michelf.com/projects/php-markdown/extra/" style=
+            "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">
+            PHP Markdown Extra Documentation</a>
+        </li>
+    </ul>
+
+    <div>
+        <br>
+    </div>
+
+    <div>
+        <h1 id="intro" style=
+        "margin: 0px 0px 6px 20px; text-decoration: underline; padding: 0px 0px 2px; color: rgb(0, 0, 0);">
+        Template Editing</h1>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+        Stacey’s templates allow a mix of standard markup types &amp; simple
+        dynamic variables to help create your final pages.</p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">They
+        end up looking something like this:</p>
+        <pre style=
+        "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+...
+&lt;h1 class="col three"&gt;
+  <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@name</em>
+  &lt;strong&gt;<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@profession</em>&lt;/strong&gt;
+&lt;/h1&gt;
+&lt;em class="col three"&gt;<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@email</em>&lt;/em&gt;
+&lt;hr&gt;
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">:navigation</em>
+&lt;div id="content" class="col eight"&gt;
+  <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">:category_lists</em>
+&lt;/div&gt;
+&lt;hr&gt;
+&lt;p class="col five"&gt;&amp;copy; Copyright <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@name</em> <em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@current_year</em>&lt;/p&gt;
+...
+</pre>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">All of
+        the templates sit within the&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/templates</em>&nbsp;folder.
+        Partial templates sit within<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/templates/partials</em>,
+        they are used for looping through collections of objects such as the
+        images within a folder or sets of navigation. <img alt=
+        "Screenshot of /templates folder" src="" style=
+        "border-width: 1px; border-color: rgb(204, 204, 204); padding: 2px; margin: 6px 0px 10px; display: block;">
+        </p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">Read
+        more about&nbsp;<a href=
+        "http://staceyapp.com/documentation/variable-types/partials/" style=
+        "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">how
+        partials work</a>.</p>
+
+        <h3 id="template-assignment" style=
+        "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">Template
+        assignment</h3>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+        Templates are assigned to pages based off the name of the .txt file
+        within the page’s folder. If no matches are found, stacey will return
+        an error.</p>
+
+        <p style=
+        "color: rgb(136, 136, 136); display: block; font-style: normal; margin: 0px 0px 8px 20px; padding: 0px 0px 2px; text-align: left; text-indent: 0px">
+        ie. if the&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/content/2.contact-me/</em>&nbsp;folder’s
+        .txt file is named&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">contact-page.txt</em>,
+        it will look for a matching template within the /templates/ folder,
+        finding one named<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">contact-page.html</em>.</p>
+
+        <h3 id="template-types" style=
+        "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">Template types</h3>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+        Templates do not need to be .html files. Stacey will recognise and
+        serve correct content-type headers for templates with the following
+        extensions:<br>
+        <em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">
+        .html</em>,&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.json</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.xml</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.atom</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.rss</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.rdf</em>&nbsp;&amp;&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.txt</em></p>
+
+        <h2 id="public-folder" style=
+        "margin: 35px 0px 6px 20px; text-decoration: underline; color: rgb(0, 0, 0);">
+        Public folder</h2>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+        If&nbsp;<a href="http://staceyapp.com/tutorials/enable-clean-urls/"
+        style=
+        "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">clean
+        urls</a>&nbsp;are enabled, any files (and folders) within
+        the&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">public</em>&nbsp;folder
+        will be served from the root of your website.</p>
+
+        <p style=
+        "color: rgb(136, 136, 136); display: block; font-style: normal; margin: 0px 0px 8px 20px; padding: 0px 0px 2px; text-align: left; text-indent: 0px">
+        ie.&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/public/docs/css/screen.css</em>&nbsp;will
+        be accessible from<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">http://yourdomain.com/docs/css/screen.css</em>.</p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">The
+        public folder is generally where you store your css, javascript &amp;
+        any assets used within the templates.</p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+        <br></p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;"></p>
+
+        <h1 id="intro" style=
+        "margin: 0px 0px 6px 20px; text-decoration: underline; padding: 0px 0px 2px; color: rgb(0, 0, 0);">
+        Templating Language</h1>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">Stacey
+        pre-parses each template as plain text before it is rendered out as
+        html. As the templating system runs off regular expressions, there is
+        no need to explicitly wrap the language constructs in&nbsp;<code style=
+        "color: rgb(102, 102, 102);">&lt;?php ?&gt;</code>&nbsp;tags.</p>
+
+        <h2 id="language-contructs" style=
+        "margin: 35px 0px 6px 20px; text-decoration: underline; color: rgb(0, 0, 0);">
+        Language Constructs</h2>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">Within
+        stacey templates, you have access to three language
+        constructs:&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;"><code style="color: rgb(102, 102, 102);">get</code></em>blocks,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;"><code style="color: rgb(102, 102, 102);">foreach</code></em>&nbsp;loops
+        &amp; boolean&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;"><code style="color: rgb(102, 102, 102);">if</code></em>&nbsp;statements.</p>
+
+        <dl class="thin" style=
+        "clear: both; width: 580px; overflow: hidden; margin: 2px 0px 8px 20px;">
+        <dt style="width: 60px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style=
+        "display: inline; padding: 6px 0px 0px;">get</strong></dt>
+
+            <dd style=
+            "width: 400px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            <pre style=
+            "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; font-size: 0.95em; line-height: 1.25;">
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">get "/url" do</em>
+  # do stuff
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">end</em>
+</pre>
+            </dd>
+        </dl>
+
+        <dl class="thin" style=
+        "clear: both; width: 580px; overflow: hidden; margin: 2px 0px 8px 20px;">
+        <dt style="width: 60px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style=
+        "display: inline; padding: 6px 0px 0px;">foreach</strong></dt>
+
+            <dd style=
+            "width: 400px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            <pre style=
+            "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; font-size: 0.95em; line-height: 1.25;">
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">foreach $collection do</em>
+  # do stuff
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">endforeach</em>
+</pre>
+            </dd>
+        </dl>
+
+        <dl class="thin" style=
+        "clear: both; width: 580px; overflow: hidden; margin: 2px 0px 8px 20px;">
+        <dt style="width: 60px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style="display: inline; padding: 6px 0px 0px;">if</strong></dt>
+
+            <dd style=
+            "width: 400px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            <pre style=
+            "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; font-size: 0.95em; line-height: 1.25;">
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">if @variable do</em>
+  # do stuff
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">endif</em>
+</pre>
+            </dd>
+        </dl>
+
+        <dl class="thin" style=
+        "clear: both; width: 580px; overflow: hidden; margin: 2px 0px 8px 20px;">
+        <dt style="width: 60px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style="display: inline; padding: 6px 0px 0px;">if
+        not</strong></dt>
+
+            <dd style=
+            "width: 400px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            <pre style=
+            "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; font-size: 0.95em; line-height: 1.25;">
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">if !@variable do</em>
+  # do stuff
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">endif</em>
+</pre>
+            </dd>
+        </dl>
+
+        <h3 id="variable-context" style=
+        "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">Variable Context</h3>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">Once
+        you are inside a&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;"><code style="color: rgb(102, 102, 102);">foreach</code></em>&nbsp;loop,
+        the variable context changes to the current object being referenced by
+        the loop.</p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">If you
+        want to temporarily shift to the context of a specific page, you can
+        add a<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;"><code style="color: rgb(102, 102, 102);">get</code></em>&nbsp;block.</p>
+        <pre style=
+        "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">get "/projects/project-1" do</em>
+  &lt;p&gt;@page_name&lt;/p&gt;
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">end</em>
+</pre>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">This
+        will change the context from the current page being viewed to
+        the<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/projects/project-1</em>&nbsp;page.
+        This means&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">$children</em>&nbsp;will
+        be filled with the children of the /projects/project-1
+        page,&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">@page_name</em>&nbsp;will
+        equal 'Projects', etc.</p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">So, if
+        you wanted to only list children of the /projects folder which do not
+        contain children of their own, you could construct the following
+        partial:</p>
+        <pre style=
+        "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+get "<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">/projects</em>" do
+  foreach <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">$children</em> do
+    if !<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">$children</em> do
+      &lt;p&gt;&lt;a href="<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@url</em>"&gt;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@page_name</em>&lt;/a&gt;&lt;/p&gt;
+    endif
+  endforeach
+end
+</pre>
+
+        <h3 id="foreach-limiting" style=
+        "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">Limiting foreach
+        Loops</h3>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">It is
+        possible to limit foreach loops using a $collection[<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">start</em>:<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">limit</em>]
+        syntax.<br>
+        The array will essentially be sliced from the provided&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">start</em>&nbsp;until
+        the&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">limit</em>.</p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+        The&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">start</em>&nbsp;&amp;&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">limit</em>&nbsp;are
+        both optional. You could specify&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">$collection[:2]</em>&nbsp;to
+        only list the first two items, or&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">$collection[2:]</em>&nbsp;to
+        list all items except the first two.</p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">The
+        following partial would list the third &amp; fourth items from the
+        $children collection:</p>
+        <pre style=
+        "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+&lt;ol id="navigation"&gt;
+  <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">foreach $children[2:2] do</em>
+    &lt;li&gt;&lt;a href="@url"&gt;@page_name&lt;/a&gt;&lt;/li&gt;
+  <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">endforeach</em>
+&lt;/ol&gt;
+</pre>
+
+        <h3 id="foreach-nesting" style=
+        "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">Nesting foreach
+        Loops</h3>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">To give
+        you the ability to pass through multiple levels of objects, foreach
+        loops can also be nested within themselves (although
+        using&nbsp;<a href="http://staceyapp.com/documentation/variable-types/partials/#recursive-partials"
+        style=
+        "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">recursive
+        partials</a>&nbsp;would be a more elegant solution).</p>
+        <pre style=
+        "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+&lt;ol id="navigation"&gt;
+  <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">foreach $root do</em>
+    &lt;li&gt;&lt;a href="@url"&gt;@page_name&lt;/a&gt;
+      <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">if $children do</em>
+        &lt;ol&gt;
+          <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">foreach $children do</em>
+            &lt;li&gt;&lt;a href="@url"&gt;@page_name&lt;/a&gt;
+          <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">endforeach</em>
+        &lt;/ol&gt;
+      <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">endif</em>
+    &lt;/li&gt;
+  <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">endforeach</em>
+&lt;/ol&gt;
+</pre>
+        <p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;"></p>
+
+        <h1 id="intro" style=
+        "margin: 0px 0px 6px 20px; text-decoration: underline; padding: 0px 0px 2px; color: rgb(0, 0, 0);">
+        Assets</h1>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">In
+        addition to any images or videos, stacey will also recognise any asset
+        types placed within a page’s folder and push them into their
+        own&nbsp;<a href=
+        "http://staceyapp.com/documentation/variable-types/collections/" style=
+        "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">collections</a>.</p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">For
+        example, this page: <img alt="An example folder listing" src="" style=
+        "border-width: 1px; border-color: rgb(204, 204, 204); padding: 2px; margin: 6px 0px 10px; display: block;">
+        </p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">will
+        create the following collections:</p>
+        <pre style=
+        "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">$pdf</em>: ['pdf-file.pdf' =&gt; Asset]
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">$mp3</em>: ['mp3-file-1.mp3' =&gt; Asset
+       'mp3-file-2.mp3' =&gt; Asset]
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">$html</em>: ['youtube-embed.html' =&gt; HTML]
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">$doc</em>: ['word-document.doc' =&gt; Asset]
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">$jpg</em>: ['01.jpg' =&gt; Image]
+</pre>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">Each of
+        these can be looped over within your templates or partials in the same
+        way as the&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">$images</em>&nbsp;or&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">$video</em>&nbsp;collections.<br>
+
+        ie.</p>
+        <pre style=
+        "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+foreach <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">$mp3</em> do
+  &lt;object height="50" width="200"&gt;
+    &lt;param name="kioskmode" value="true"&gt;
+    &lt;param name="src" value="<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@url</em>"&gt;
+    &lt;param name="autoplay" value="false"&gt;
+    &lt;param name="controller" value="true"&gt;
+    &lt;embed height="50" src="<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@url</em>" type="video/quicktime" width="200" controller="true" autoplay="false" kioskmode="true"&gt;
+  &lt;/object&gt;
+endforeach
+</pre>
+
+        <h2 id="asset-collections" style=
+        "margin: 35px 0px 6px 20px; text-decoration: underline; color: rgb(0, 0, 0);">
+        Asset Collections</h2>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">You can
+        also create specific, named, collections of assets. Stacey will
+        recognise any folders beginning with an underscore as asset
+        collections. These collections can be referenced using the name of the
+        folder prefixed with a&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">$</em>&nbsp;character.</p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">ie.
+        this directory structure: <img alt=
+        "An example file listing for asset collections" src="" style=
+        "border-width: 1px; border-color: rgb(204, 204, 204); padding: 2px; margin: 6px 0px 10px; display: block;">
+        </p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">will
+        create the following asset collections:</p>
+        <pre style=
+        "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">$_logos</em>: ['logo1.gif' =&gt; Image
+          'logo2.mov' =&gt; Video]
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">$_thumbnails</em>: ['thumb1.jpg' =&gt; Image
+               'thumb2.jpg' =&gt; Image
+               'thumb3.jpg' =&gt; Image
+               'thumb4.jpg' =&gt; Image]
+</pre>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">These
+        asset collections can then be looped over in the same way as
+        the&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">$images</em>collection.<br>
+
+        ie.</p>
+        <pre style=
+        "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+foreach <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">$_logos</em> do
+  &lt;li&gt;&lt;img src="<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@url</em>" alt="<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@name</em>"&gt;&lt;/li&gt;
+endforeach
+</pre>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">Asset
+        collection folders will not show up within any other collections (such
+        as $siblings or $children).</p>
+
+        <h2 id="asset-types" style=
+        "margin: 35px 0px 6px 20px; text-decoration: underline; color: rgb(0, 0, 0);">
+        Asset Types</h2>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">Stacey
+        knows how to construct a few asset types by default. Each type will be
+        assigned its own set of variables which can then be accessed within the
+        context of a loop.</p>
+
+        <h3 style="margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">Images</h3>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+        (<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.jpg</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.jpeg</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.gif</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.png</em>)</p>
+
+        <dl style=
+        "clear: both; width: 580px; overflow: hidden; margin: 0px 0px 8px 20px;">
+        <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style=
+        "display: inline; padding: 6px 0px 0px;">@name</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The name of the current image. This is constructed by converting
+            the filename into sentence-text (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">1.my-image.jpg</em>&nbsp;becomes&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">My
+            image</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@file_name</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The filename of the current file. (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">1.my-image.jpg</em>)</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@url</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The relative path to this file from the current page. (ie. )</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@small</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The relative path to a file matching the name &amp; filetype of the
+            current file, with an _sml suffix (if such a file exists).<br>
+            <i style=
+            "color: rgb(136, 136, 136); display: block; padding: 0px 0px 2px; margin: 0px 0px 2px; font-style: normal;">
+            ie. an image named&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">portrait.jpg</em>&nbsp;would
+            have an @small var of<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">portrait_sml.jpg</em></i></dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@large</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The relative path to a file matching the name &amp; filetype of the
+            current file, with an _lge suffix (if such a file exists).<br>
+            <i style=
+            "color: rgb(136, 136, 136); display: block; padding: 0px 0px 2px; margin: 0px 0px 2px; font-style: normal;">
+            ie. an image named&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">portrait.jpg</em>&nbsp;would
+            have an @large var of<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">portrait_lge.jpg</em></i></dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@width</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The width of the current image.<i style=
+            "color: rgb(136, 136, 136); display: block; padding: 0px 0px 2px; margin: 0px 0px 2px; font-style: normal;">ie.
+            560</i></dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@height</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The height of the current image.<i style=
+            "color: rgb(136, 136, 136); display: block; padding: 0px 0px 2px; margin: 0px 0px 2px; font-style: normal;">ie.
+            400</i></dd>
+        </dl>
+
+        <p style=
+        "color: rgb(136, 136, 136); display: block; font-style: normal; margin: 0px 0px 8px 20px; padding: 0px 0px 2px; text-align: left; text-indent: 0px">
+        The following variables are read from&nbsp;<a href=
+        "http://staceyapp.com/documentation/editing-templates/assets/#iptc-meta"
+        style=
+        "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">IPTC
+        metadata</a>&nbsp;attached to the image.</p>
+
+        <dl style=
+        "clear: both; width: 580px; overflow: hidden; margin: 0px 0px 8px 20px;">
+        <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style=
+        "display: inline; padding: 6px 0px 0px;">@title</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The 'title' IPTC metadata (field 005).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@description</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The 'description/caption' IPTC metadata (field 120).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@keywords</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The 'keywords' IPTC metadata (field 025).</dd>
+        </dl>
+
+        <h3 style="margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">Video</h3>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+        (<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.mov</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.mp4</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.m4v</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.swf</em>)</p>
+
+        <dl style=
+        "clear: both; width: 580px; overflow: hidden; margin: 0px 0px 8px 20px;">
+        <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style=
+        "display: inline; padding: 6px 0px 0px;">@name</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The name of the current video. This is constructed by converting
+            the filename into sentence-text (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">1.my-movie.mov</em>&nbsp;becomes&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">My
+            movie</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@file_name</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The filename of the current file.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@url</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The relative path to this file from the current page.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@width</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The width of the current video (pulled from the name of the file –
+            ie.<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">300</em>x150.mov).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@height</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The height of the current video (pulled from the name of the file –
+            ie. 300x<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">150</em>.mov).</dd>
+        </dl>
+
+        <h3 style="margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">HTML</h3>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+        (<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.html</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.htm</em>)</p>
+
+        <dl style=
+        "clear: both; width: 580px; overflow: hidden; margin: 0px 0px 8px 20px;">
+        <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style=
+        "display: inline; padding: 6px 0px 0px;">@name</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The name of the current file. This is constructed by converting the
+            filename into sentence-text (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">1.my-youtube-video.html</em>&nbsp;becomes&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">My
+            youtube video</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@file_name</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The filename of the current file.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@url</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The relative path to this file from the current page.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@content</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The contents of the html file (as raw html).</dd>
+        </dl>
+
+        <h3 style="margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">Any other
+        assets</h3>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+        (<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.*</em>)</p>
+
+        <dl style=
+        "clear: both; width: 580px; overflow: hidden; margin: 0px 0px 8px 20px;">
+        <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style=
+        "display: inline; padding: 6px 0px 0px;">@name</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The name of the current file. This is constructed by converting the
+            filename into sentence-text (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">1.my-resume.pdf</em>&nbsp;becomes&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">My
+            resume</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@file_name</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The filename of the current file.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@url</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The relative path to this file from the current page.</dd>
+        </dl>
+
+        <h3 id="iptc-meta" style=
+        "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">IPTC metadata</h3>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+        The&nbsp;<a href=
+        "http://www.iptc.org/cms/site/index.html?channel=CH0098" style=
+        "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">IPTC
+        metadata</a>&nbsp;standard allows read/write metadata to be attached
+        directly to image files (generally copyright information, author name
+        and the like). Stacey will extract parts of this data and make it
+        available to the templates.</p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+        Currently the supported fields are&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">@title</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">@description</em>&nbsp;&amp;&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">@keywords</em>.
+        You can attach and edit IPTC metadata using a variety of programs — two
+        free options are<a href=
+        "http://www.stalkingwolf.net/software/cocoviewx/" style=
+        "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">CocoViewX</a>&nbsp;(for
+        mac) &amp;&nbsp;<a href="http://www.irfanview.com/" style=
+        "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">Irfanview</a>&nbsp;(for
+        windows)</p>
+        <p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;"></p>
+
+        <h1 id="intro" style=
+        "margin: 0px 0px 6px 20px; text-decoration: underline; padding: 0px 0px 2px; color: rgb(0, 0, 0);">
+        Variable Types</h1>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">There
+        are three type of variables within stacey’s templating system:</p>
+
+        <dl style=
+        "clear: both; width: 580px; overflow: hidden; margin: 0px 0px 8px 20px;">
+        <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style="display: inline; padding: 6px 0px 0px;"><a href=
+        "http://staceyapp.com/documentation/variable-types/variables/"
+            style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">
+            <em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">
+            @</em>variables</a></strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            constructed from the contents of the page’s .txt file and
+            supplemented by stacey (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">@page_name</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style="display: inline; padding: 6px 0px 0px;"><a href=
+            "http://staceyapp.com/documentation/variable-types/collections/"
+            style=
+            "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">
+            <em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">
+            $</em>collections</a></strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            collections of assets or pages that can be looped over
+            (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">$children</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style="display: inline; padding: 6px 0px 0px;"><a href=
+            "http://staceyapp.com/documentation/variable-types/partials/"
+            style="border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">
+            <em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">
+            :</em>partials</a></strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            shorthand reference to include files from within
+            the&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/templates/partials</em>directory
+            (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">:navigation</em>).</dd>
+        </dl>
+        <p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;"></p>
+
+        <h1 id="intro" style=
+        "margin: 0px 0px 6px 20px; text-decoration: underline; padding: 0px 0px 2px; color: rgb(0, 0, 0);">
+        Variables</h1>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">Within
+        the templates files, apart from our standard html, we also have access
+        to any variables defined within the .txt file that corresponds to the
+        current page. These can be accessed by using an&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">@</em>&nbsp;symbol
+        followed by the&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">key</em>.</p>
+
+        <p style=
+        "color: rgb(136, 136, 136); display: block; font-style: normal; margin: 0px 0px 8px 20px; padding: 0px 0px 2px; text-align: left; text-indent: 0px">
+        ie.&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">@title</em></p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">In
+        addition, any variables defined in&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/content/_shared.txt</em>&nbsp;are
+        available within all template files.</p>
+
+        <h2 id="stacey-created-variables" style=
+        "margin: 35px 0px 6px 20px; text-decoration: underline; color: rgb(0, 0, 0);">
+        Stacey-created variables</h2>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">These
+        are created for each page within the site.</p>
+
+        <dl style=
+        "clear: both; width: 580px; overflow: hidden; margin: 0px 0px 8px 20px;">
+        <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style=
+        "display: inline; padding: 6px 0px 0px;">@root_path</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will output a relative path from the current page to the root of
+            the site.<i style=
+            "color: rgb(136, 136, 136); display: block; padding: 0px 0px 2px; margin: 0px 0px 2px; font-style: normal;">ie.
+            in&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/projects/project-name/</em>@root_path
+            will contain&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">../../</em>.</i></dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@thumb</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Outputs the relative url to the thumbnail for this page (if one
+            exists).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@url</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Outputs the relative path to this page from the page currently
+            being viewed (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">../../projects/project-1</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@permalink</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Outputs the absolute url path of the current page
+            (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">projects/project-1</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@slug</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Outputs the slug of the current page (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">project-1</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@is_current</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Returns true if&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">@permalink</em>&nbsp;matches
+            the server’s request uri.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@is_first</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Returns true if current page is the first in its collection.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@is_last</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Returns true if current page is the last in its collection.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@page_name</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Outputs the name of the current page. This is constructed by
+            converting the page’s slug into title-case text
+            (ie.&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">test-project-1</em>&nbsp;becomes&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">Test
+            Project 1</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@siblings_count</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The number of pages sitting at the same level as this page
+            (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">12</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@children_count</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The number of children below this page (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">12</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@index</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            The number of the current page, relative to the other pages sitting
+            at the same level (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">5</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@current_year</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will output the current year.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@domain_name</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will output the domain name of the current site
+            (ie.&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">staceyapp.com</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@base_url</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will output the domain name &amp; folder path stacey is running
+            from (ie.<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">staceyapp.com/stacey</em>).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@site_updated</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will output the date the site was last edited in
+                the&nbsp;<a href="http://tools.ietf.org/html/rfc3339" style=
+                "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">RFC
+                3339</a>&nbsp;format (ie.<em style=
+                "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">2009-12-12T17:34:23+11:00</em>).
+            </dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@updated</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will output the date the current page was last edited in
+            the&nbsp;<a href="http://tools.ietf.org/html/rfc3339" style=
+            "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">RFC
+            3339</a>format (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">2009-12-12T17:34:23+11:00</em>).
+            </dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@stacey_version</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will output the version of stacey you are running
+            (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">2.0</em>).</dd>
+        </dl>
+
+        <h3 id="text-file-variables" style=
+        "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">Text-file
+        variables</h3>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">These
+        variables can be used from within your text files.</p>
+
+        <dl style=
+        "clear: both; width: 580px; overflow: hidden; margin: 0px 0px 8px 20px;">
+        <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style=
+        "display: inline; padding: 6px 0px 0px;">@path</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will output the full file system path to the current page.
+            (ie.&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/content/3.about</em>)</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">@bypass_cache</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            If set, this will bypass stacey's caching mechanisms for this
+            page.</dd>
+        </dl>
+        <p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;"></p>
+
+        <h1 id="intro" style=
+        "margin: 0px 0px 6px 20px; text-decoration: underline; padding: 0px 0px 2px; color: rgb(0, 0, 0);">
+        Collections</h1>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">Stacey
+        provides collections of related pages and assets which can
+        be&nbsp;<a href=
+        "http://staceyapp.com/documentation/editing-templates/templating-language/#language-contructs"
+        style=
+        "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">looped
+        over</a>from within the templates.</p>
+
+        <dl style=
+        "clear: both; width: 580px; overflow: hidden; margin: 0px 0px 8px 20px;">
+        <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style=
+        "display: inline; padding: 6px 0px 0px;">$root</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will list each top-level page within&nbsp;<em style=
+            "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/content</em>.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">$children</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will list any child pages relative to the current page.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">$parents</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will list the full ancestor tree relative to the current page.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">$parent</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will list the direct ancestor relative to the current page.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">$siblings</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will list any pages sitting at the same level as the current page.
+            This collection does not include the current page.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">$siblings_and_self</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will list any pages sitting at the same level as the current page.
+            This collection includes the current page.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">$next_sibling</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Constructs a reference to the next page sitting at the same level
+            as the current page (in reverse-numeric order).</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">$previous_sibling</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Constructs a reference to the previous page sitting at the same
+            level as the current page (in reverse-numeric order).</dd>
+        </dl>
+
+        <h2 id="asset-collections" style=
+        "margin: 35px 0px 6px 20px; text-decoration: underline; color: rgb(0, 0, 0);">
+        Asset Collections</h2>
+
+        <dl style=
+        "clear: both; width: 580px; overflow: hidden; margin: 0px 0px 8px 20px;">
+        <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+        <strong style=
+        "display: inline; padding: 6px 0px 0px;">$images</strong><br>
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">$video</strong></dt>
+
+            <dd style=
+            "width: 450px; margin: 0px 0px 12px; float: left; color: rgb(102, 102, 102);">
+            Will output a list of all the images or video files associated with
+            this page (ie. sitting in the same folder as the page’s .txt file).
+            If there are no matching assets, these collections will be
+            empty.</dd>
+
+            <dt style="width: 125px; margin: 0px 5px 12px 0px; float: left;">
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">$html</strong>,<br>
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">$swf</strong>,<br>
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">$mp3</strong>,<br>
+            <strong style=
+            "display: inline; padding: 6px 0px 0px;">$pdf</strong>,<br>
+            etc.</dt>
+        </dl>
+        <p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;"></p>
+
+        <div class="col seven" id="content" style=
+        "float: left; margin: 0px; padding: 0px; width: 540px;">
+            <div class="col seven" style=
+            "float: left; margin: 0px; padding: 0px; width: 540px;">
+                <h1 id="intro" style=
+                "margin: 0px 0px 6px 20px; text-decoration: underline; padding: 0px 0px 2px;">
+                Partials</h1>
+
+                <p style="margin: 0px 0px 8px 20px;">Partial templates separate
+                out re-usable and repeatable blocks of html into their own
+                files. They sit within the&nbsp;<em style=
+                "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/templates/partials</em>&nbsp;folder.</p>
+
+                <p style="margin: 0px 0px 8px 20px;">Stacey essentially
+                flattens the folder structure within /templates/partials, so
+                you can place your partial files within whatever subfolders
+                make sense to you. This also means that you cannot have two
+                templates with the same name, even if they sit within different
+                folders, or have different file extensions.</p>
+
+                <p style="margin: 0px 0px 8px 20px;">Partials can be referenced
+                within a template by using a&nbsp;<em style=
+                "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">:</em>&nbsp;followed
+                by the filename of the partial template.<br>
+                <i style=
+                "color: rgb(136, 136, 136); display: block; padding: 0px 0px 2px; margin: 0px 0px 2px; font-style: normal;">
+                ie.&nbsp;<em style=
+                "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">:images</em>&nbsp;will
+                be a reference to the&nbsp;<em style=
+                "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/templates/partials/assets/images.html</em>&nbsp;partial.</i></p>
+
+                <p style="margin: 0px 0px 8px 20px;">As with templates,
+                partials do not need to be .html files. Stacey will recognise
+                the following formats:&nbsp;<em style=
+                "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.html</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.json</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.xml</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.atom</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.rss</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.rdf</em>&nbsp;&amp;&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.txt</em></p>
+
+                <h3 id="partial-nesting" style="margin: 25px 0px 6px 20px;">
+                Partial Nesting</h3>
+
+                <p style="margin: 0px 0px 8px 20px;">Partials references can
+                also be nested within other partials. So, an
+                example&nbsp;<em style=
+                "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">:media</em>partial
+                could contain:</p>
+
+                <p style="margin: 0px 0px 8px 20px;"><strong style=
+                "display: block;">/templates/partials/assets/media.html</strong></p>
+                <pre style=
+                "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+if $images do
+  <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">:images</em>
+endif
+
+if $video do
+  <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">:video</em>
+endif
+</pre>
+
+                <p style="margin: 0px 0px 8px 20px;">Where&nbsp;<em style=
+                "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">:images</em>&nbsp;&amp;&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">:video</em>&nbsp;are
+                references to other partial files.</p>
+
+                <h3 id="recursive-partials" style="margin: 25px 0px 6px 20px;">
+                Recursive Partials</h3>
+
+                <p style="margin: 0px 0px 8px 20px;">Partials can also include
+                references to themselves, allowing you to recurse through
+                nested objects (ie. walking down a tree of $children).</p>
+
+                <p style="margin: 0px 0px 8px 20px;">A more elegant solution to
+                the nested&nbsp;<a href=
+                "http://staceyapp.com/documentation/editing-templates/templating-language/#foreach-nesting"
+                style=
+                "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">foreach
+                loop</a>&nbsp;example would be to split the code into two
+                partials and take advantage of recursion within
+                the&nbsp;<em style=
+                "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">:children</em>&nbsp;partial.</p>
+
+                <p style="margin: 0px 0px 8px 20px;"><strong style=
+                "display: block;">/templates/partials/navigation/navigation.html</strong></p>
+                <pre style=
+                "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+&lt;ol id="navigation"&gt;
+  <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">foreach $root do</em>
+    &lt;li&gt;&lt;a href="@url"&gt;@page_name&lt;/a&gt; <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">:children</em> &lt;/li&gt;
+  <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">endforeach</em>
+&lt;/ol&gt;
+</pre>
+
+                <p style="margin: 0px 0px 8px 20px;"><strong style=
+                "display: block;">/templates/partials/navigation/children.html</strong></p>
+                <pre style=
+                "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">if $children do</em>
+  &lt;ol&gt;
+    <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">foreach $children do</em>
+      &lt;li&gt;&lt;a href="@url"&gt;@page_name&lt;/a&gt; <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">:children</em> &lt;/li&gt;
+    <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">endforeach</em>
+  &lt;/ol&gt;
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">endif</em>
+</pre>
+
+                <p style="margin: 0px 0px 8px 20px;">Note that
+                the&nbsp;<em style=
+                "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">children.html</em>&nbsp;partial
+                includes a reference to itself, which means it will keep
+                including itself (within itself) until the if statement no
+                longer returns true.</p>
+            </div>
+        </div>
+
+        <div id="footer" style="clear: both; padding: 25px 0px 0px;"></div>
+        <p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;"></p>
+
+        <h1 id="intro" style=
+        "margin: 0px 0px 6px 20px; text-decoration: underline; padding: 0px 0px 2px; color: rgb(0, 0, 0);">
+        RSS/Atom/JSON</h1>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">Stacey
+        doesn’t make too many assumptions about which format your templates are
+        written in. It uses the extension of the template file to work out what
+        type of content it should be serving. By default stacey will recognise
+        and serve the correct content-types for&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.html</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.json</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.xml</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.atom</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.rss</em>,&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.rdf</em>&nbsp;&amp;&nbsp;<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">.txt</em>&nbsp;files.</p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">In
+        fact, this is how the default RSS feed is built. The&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/content/feed</em>&nbsp;directory
+        is just a normal stacey page, the only difference is that it uses .atom
+        rather than .html template files.</p>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">So, if
+        you wanted to switch out Atom for the RSS2 format, your<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/templates/feed.atom</em>&nbsp;template
+        could be renamed to&nbsp;<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">feed.rss</em>&nbsp;and
+        changed to look something like this:</p>
+        <pre style=
+        "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;rss version="2.0"&gt;
+  &lt;channel&gt;
+    &lt;title&gt;<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@name</em>'s <em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@feed_name</em>&lt;/title&gt;
+    &lt;link&gt;http://<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@base_url</em>/<em style="font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@permalink</em>/&lt;/link&gt;
+    &lt;description&gt;<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@description</em>&lt;/description&gt;
+
+  <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">:feed_loop</em>
+
+  &lt;/channel&gt;
+&lt;/rss&gt;
+</pre>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">
+        Additionally, if&nbsp;<a href=
+        "http://staceyapp.com/tutorials/enable-clean-urls/" style=
+        "border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(153, 153, 153); color: rgb(102, 102, 102); padding: 0px; text-decoration: initial;">clean
+        urls</a>&nbsp;are enabled, stacey creates file extension shortcuts for
+        all the file types listed above. This means rather than having to point
+        to http://yourdomain.com<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/feed/</em>,
+        you could shortcut this to http://yourdomain.com<em style=
+        "font-style: normal; background-color: rgb(255, 255, 153); padding: 0px 2px;">/feed.atom</em>.</p>
+
+        <h3 id="cleaning-json" style=
+        "margin: 25px 0px 6px 20px; color: rgb(0, 0, 0);">Cleaning JSON</h3>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">Stacey
+        will also automatically compress and strip any trailing commas from
+        JSON templates. So, the following template:</p>
+        <pre style=
+        "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">get "/" do</em>
+{
+  "pages": [
+    <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">foreach $children do</em>
+      { "title": "<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">@title</em>" },
+    <em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">endforeach</em>
+  ]
+}
+<em style=
+"font-style: normal; background-color: rgb(255, 255, 153); padding: 0px;">end</em>
+</pre>
+
+        <p style=
+        "margin: 0px 0px 8px 20px; text-align: left; text-indent: 0px;">will
+        render as:</p>
+        <pre style=
+        "background-color: rgb(255, 255, 238); color: rgb(85, 85, 85); padding: 8px 12px; width: 650px; margin-top: 6px; margin-bottom: 6px; margin-left: 7px; font-size: 0.95em; line-height: 1.25;">
+
+  {"pages":[{"title":"Projects"},{"title":"About"},{"title":"Contact"}]}
+</pre>
+        <p>
+    </div>
+    <p>
+    <p>
+</body>
+</html>

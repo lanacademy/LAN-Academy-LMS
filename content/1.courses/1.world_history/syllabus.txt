@@ -1,0 +1,7 @@
+page_description: A collection of Ñame's graphic design work
+-
+title: World History Syllabus
+-
+content: 
+###Technological and Environmental Transformations: >600.B.C.E.
+####[The Agricultural Revolution](./?/courses/world_history/Crash_Course_WH/#1)

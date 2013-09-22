@@ -1,0 +1,30 @@
+:head
+      <div id="content" class="col eight">
+      <h2 class=""><a href="@root_path">@title</a></h2>
+	  <br/>
+	  <div id="pages" class="col eight">
+	  	<div>
+	          @content
+	  	</div>
+	  	<div>
+			<p>A list of all course resources.</p>
+			<br/>
+	          :projects-list
+	  	</div>
+	  </div>
+	  <br/>
+	  <div id="paging-nav" class="col eight"></div>
+
+      </div>
+      <hr>
+	  <!--Scripts-->
+      <script src="@root_path/public/docs/js/jquery-1.9.0.min.js"></script>
+      <script src="@root_path/public/docs/js/jquery.pagination-with-hash-change.js"></script>
+      <script>
+        $(document).ready(function() {
+          $('#pages').paginationwithhashchange({
+          });
+        });
+      </script>
+	  <!--/Scripts-->
+:foot

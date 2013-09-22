@@ -1,0 +1,7 @@
+title: Mixed Media Example
+-
+date: 2009, Jun–
+-
+content: 
+Yeah, so the youtube weirdness is because of youtube, not our plugin. Maybe the old embed would work better. Whatever. 
+
