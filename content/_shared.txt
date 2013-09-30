@@ -1,6 +1,6 @@
-name: Ñame
+name: LAN Academy LMS
 -
-profession: Gräphic Designer
+profession: 
 -
 email: 
-<hi@yourdomain.com>
+lanacademy.org

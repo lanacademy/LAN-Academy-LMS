@@ -1,0 +1,6 @@
+title: Documentation
+-
+content: 
+Look in this content directory for a self contained copy of the stacey cms documentation. 
+
+

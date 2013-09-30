@@ -20,14 +20,13 @@ Stacey app's original documentation and more will be available on our wiki, righ
 We're always open to pull requests. Or if you're interested in the project in general, check out LAN Academy's [official website](http://lanacademy.org).
 
 
-## Issues
-The documentation page is all sorts of messed up. That's part of the messiness I mention in the initial commit. 
+## Plans
 
 Besides that, these are the features or fixes needed for our October class:
 
-Feature: Users and Registration.	I added an example of flat file users in the `/users` directory but haven't yet actually integrated it into the lms. 
+Feature: Users and Registration.	Still integrating into the lms. Almost working. 
 
-Feature: Student Tracking.	Eventually it would be awesome to have a dashboard, but for now we're just looking to output it to a log file. 
+Feature: Student Tracking.	Figure we can just use http://discolytics.com/ for now. A dashboard for the student would be awesome eventually, but that's a post-november project. 
 
 A better html5/flash video player. Eventually we want support for:
 * Subtitles
@@ -38,4 +37,4 @@ A better html5/flash video player. Eventually we want support for:
 Feature: Multiple Choice quiz generator. 	This seems reasonable if we just create an asset/template for files name.quiz or something and build off something else like:
 https://github.com/euyuil/php-quiz-generator Bonus: This one has regex support for written answers. That's super useful.
 
-Oh, and the back to Syllabus doesn't work. We either need to implement a parent asset or do something else that's clever.
+Issue: We sometimes have multiple jquery instances floating around, probably shouldn't do that. (Mostly the content switcher vs the login/register)
