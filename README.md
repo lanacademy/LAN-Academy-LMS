@@ -17,7 +17,7 @@ Stacey app's original documentation and more will be available on our wiki, righ
 
 ## Get involved
 
-We're always open to pull requests. Or if you're interested in the project in general, check out LAN Academy's [official website](http://lanacademy.org).
+We're open to getting pushed fixes or features. Or if you're interested in the project in general, check out LAN Academy's [official website](http://lanacademy.org).
 
 
 ## Plans
