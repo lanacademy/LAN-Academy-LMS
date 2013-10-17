@@ -1,4 +1,4 @@
-#NOTE: We're currently focusing on building up our Pico-based version, this is just kept around for reference 
+####NOTE: We're currently focusing on building up our Pico-based version, this is just kept around for reference 
 
 # LAN Academy LMS
 
